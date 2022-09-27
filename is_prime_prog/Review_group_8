@@ -1,0 +1,5 @@
+Code Review of the group 8 : William Barbosa and Géraud Flamant
+function : is_prime_prog()
+
+Everything is good.
+Can be faster if n/2 instead of n in the loop.
