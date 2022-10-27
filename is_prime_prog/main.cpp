@@ -1,15 +1,23 @@
 #include <iostream>
 using namespace std;
 
-bool isPrime(int n)
+long long sqrt(long long n){
+    long long i = 0;
+    while(i * i < n)
+        i++;
+    return i; 
+}
+
+bool isPrime(long long n)
 {
+    long long root = sqrt(n);
     if (n == 0 || n == 1)
         return false;
-    if (n == 2)
+    if (n <= 3)
         return true;
     if (n % 2 == 0)
         return false;
-    for (int i = 3; i < n; i+=2)
+    for (long long i = 5; i <= root; i+=2)
         if (n % i == 0)
             return false;
     return true;
@@ -17,7 +25,7 @@ bool isPrime(int n)
 
 int main()
 {
-    int n;
+    long long n;
     while (cin >> n)
     {
         if (isPrime(n))
